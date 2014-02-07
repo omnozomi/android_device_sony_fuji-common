@@ -199,7 +199,7 @@ PRODUCT_COPY_FILES += \
 
 # Boot Logo
 PRODUCT_COPY_FILES += \
-     device/sony/fuji-common/bootlogo/OpenSEMC2.rle:root/logo.rle
+     device/sony/fuji-common/bootlogo/logo_sony_720x1280.rle:root/logo.rle
 
 # Extract recovery ramdisks
 PRODUCT_PACKAGES += \
@@ -264,7 +264,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=1 \
     persist.hwc.mdpcomp.enable=true \
     debug.composition.type=dyn \
-    debug.mdpcomp.maxlayer=3 \
+    debug.mdpcomp.maxlayer=2 \
     debug.mdpcomp.logs=0 \
     debug.egl.recordable.rgba8888=1
 

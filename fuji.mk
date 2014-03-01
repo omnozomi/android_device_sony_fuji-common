@@ -237,6 +237,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.transmitpower=true
 
 
+#### Goo Manager support if possible
+$(call inherit-product-if-exists, vendor/omnozomi/derp.mk)
+
 # QCOM
 PRODUCT_PROPERTY_OVERRIDES += \
     com.qc.hardware=true

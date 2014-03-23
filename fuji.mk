@@ -236,6 +236,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #### Goo Manager support if possible
 $(call inherit-product-if-exists, vendor/omnozomi/derp.mk)
 
+# USB Debugging
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.secure=0 \
+    ro.debuggable=1 \
+    persist.service.adb.enable=1 \
+    persist.sys.usb.config=mtp,adb
+
 # QCOM
 PRODUCT_PROPERTY_OVERRIDES += \
     com.qc.hardware=true

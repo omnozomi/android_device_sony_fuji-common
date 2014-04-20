@@ -60,6 +60,7 @@ PRODUCT_PACKAGES += \
     copybit.msm8660 \
     gralloc.msm8660 \
     hwcomposer.msm8660 \
+    memtrack.msm8660 \
     libgenlock \
     libmemalloc \
     liboverlay \
@@ -110,6 +111,10 @@ PRODUCT_PACKAGES += \
     libaudio-resampler \
     libaudioutils
     #audio_policy.conf
+
+# Camera wrapper
+#PRODUCT_PACKAGES += \
+#    camera.fuji
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -232,11 +237,22 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.use_data_netmgrd=true \
     ro.ril.transmitpower=true
 
+<<<<<<< HEAD
 
 #### Goo Manager support if possible
 $(call inherit-product-if-exists, vendor/omnozomi/derp.mk)
 
 # USB Debugging
+=======
+# USB Debugging
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.secure=0 \
+    ro.debuggable=1 \
+    persist.service.adb.enable=1 \
+    persist.sys.usb.config=mtp,adb
+
+#### Goo Manager support
+>>>>>>> OpenSEMC/cm-11.0
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.secure=0 \
     ro.debuggable=1 \
